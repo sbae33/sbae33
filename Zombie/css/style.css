@@ -1,0 +1,36 @@
+@font-face {
+    font-family: texts;
+    src: url('../src/DoubleFeature20.ttf')
+}
+.text {
+    font-family: texts;
+    text-align: center;
+    color: red;
+}
+.score {
+    font-family: texts;
+    text-align: center;
+    top: 5%;
+    color: red;
+}
+body {
+    background-image: url("../image/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#quit {
+    position: absolute;
+    left: 95%;
+    top: 95%;
+    width: 50px;
+    height: 30px;
+    font-family: texts;
+    color: red;
+    text-align: center;
+}
+#zombie{
+    position: absolute;
+}
+#zombie2 {
+    position: absolute;
+}

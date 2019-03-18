@@ -2,51 +2,21 @@
     <html>
     <head>
             <title> Zombie Hunter </title>
-            <style>
-
-            @font-face {
-                font-family: texts;
-                src: url(DoubleFeature20.ttf)
-            }
-            .text {
-                font-family: texts;
-                text-align: center;
-                color: red;
-            }
-            .score {
-                font-family: texts;
-                text-align: center;
-                top: 5%;
-                color: red;
-            }
-            body {
-                background-image: url("./image/background.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            #quit {
-                position: absolute;
-                left: 95%;
-                top: 95%;
-                width: 50px;
-                height: 30px;
-                font-family: texts;
-                color: red;
-                text-align: center;
-            }
-            
-            </style>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link href='css/style.css' rel='stylesheet' type='text/css'>
     </head>
         
 <body>
-        <img id = "zombie" src = "./image/zombie.png" width = "100" style= "top:50px; left:100px; position: absolute;"/> 
-        <img id = "zombie2" src = "./image/zombie.png" width = "100" style= "top:50px; left:100px; position: absolute;"/>
+        <img id = "zombie" src = "./image/zombie.png" width = "100"/> 
+        <img id = "zombie2" src = "./image/zombie.png" width = "100"/>
         <h2 class = "text"> Your Score </h2>
         <h1 class = "score" id = "score_number"> score </h1>
         <button  id = "quit"> QUIT </button>
 
         <audio id = "sound-effect">
-            <source src="sound_effect.mp3" type="audio/mpeg">
+            <source src="./src/sound_effect.mp3" type="audio/mpeg">
         </audio>
         
 
@@ -56,7 +26,7 @@
         let width = document.documentElement.clientWidth - 150;
         let height = document.documentElement.clientHeight -240;
 
-        document.getElementById("zombie").src = "./image/zombie.png"
+        document.getElementById("zombie").src = "./image/zombie.png";
         document.getElementById("zombie").style.top = Math.random() * height + "px";
         document.getElementById("zombie").style.left = Math.random() * width + "px";
     }
@@ -68,14 +38,12 @@
         
         score = score + 1;
         document.getElementById("score_number").innerHTML = score;
-        document.getElementById("zombie").src = "image/one_explode.gif"
+        document.getElementById("zombie").src = "image/one_explode.gif";
         document.getElementById("sound-effect").play()       
     }
     document.getElementById("zombie").onclick = explode_zombie;
     
     move_zombie()
-
-
 
 
     function move_zombie2() {
@@ -121,7 +89,7 @@
        
     </script>
 
-    <embed name="bgm" src="zombie_bgm.mp3" loop="true" hidden="true" autostart="true">
+    <embed name="bgm" src="./src/zombie_bgm.mp3" loop="true" hidden="true" autostart="true">
 
     </body>
 </html>
